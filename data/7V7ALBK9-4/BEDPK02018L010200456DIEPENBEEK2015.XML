@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openecdis:facility xmlns="http://www.openecdis.org/" xmlns:openecdis="http://www.openecdis.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ienc.openecdis.org/facility_editor/data/xsd/facility_1.0 http://ienc.openecdis.org/facility_editor/data/xsd/facility_1.0.xsd">
+ <openecdis:version>3</openecdis:version>
+ <openecdis:last_edited>2015-01-01 @ 08:00</openecdis:last_edited>
+ <openecdis:id>BEDPK02018L010200456</openecdis:id>
+ <openecdis:name>Sluis Diepenbeek</openecdis:name>
+ <openecdis:type>Lock</openecdis:type>
+ <openecdis:owner>nv De Scheepvaart</openecdis:owner>
+ <openecdis:communication_information>
+  <openecdis:address>
+   <openecdis:street>Havenlaan 28</openecdis:street>
+   <openecdis:postcode>3590</openecdis:postcode>
+   <openecdis:city>Diepenbeek</openecdis:city>
+   <openecdis:country>België</openecdis:country>
+  </openecdis:address>
+  <openecdis:contact>
+   <openecdis:company>nv De Scheepvaart</openecdis:company>
+   <openecdis:name>Sluis Diepenbeek</openecdis:name>
+   <openecdis:phone>+3211244050</openecdis:phone>
+   <openecdis:fax>+3211221277</openecdis:fax>
+   <openecdis:email>diepenbeek@descheepvaart.be</openecdis:email>
+  </openecdis:contact>
+  <openecdis:radio_communication>
+   <openecdis:calling_name>Sluis Diepenbeek</openecdis:calling_name>
+   <openecdis:channel>18</openecdis:channel>
+  </openecdis:radio_communication>
+ </openecdis:communication_information>
+ <openecdis:time_schedule>
+  <openecdis:type>Operation</openecdis:type>
+  <openecdis:valid>
+   <openecdis:from>2015-01-01</openecdis:from>
+   <openecdis:to>2015-12-31</openecdis:to>
+  </openecdis:valid>
+  <openecdis:individual_schedule>
+  <openecdis:day>
+    <openecdis:date>2015-01-01</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>00:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Nieuwjaarsdag (New Years day)</openecdis:remark>
+   </openecdis:day>
+    <openecdis:day>
+    <openecdis:date>2015-01-02</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>06:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> 2de januari (2nd of January)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-04-04</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>18:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Vooravond Pasen (evening before Easter)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-04-05</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>00:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Pasen (Easter)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-04-06</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>22:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Paasmaandag (Easter Monday)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-04-30</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag voor dag van de arbeid (Day before Labour Day)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-05-01</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>22:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag van de arbeid (Labour Day)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-05-13</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag voor OLH Hemelvaart (Day before Our Lords Ascension)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-05-14</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>22:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> OLH Hemelvaart (Our Lords Ascension)</openecdis:remark>
+   </openecdis:day>
+    <openecdis:day>
+    <openecdis:date>2015-05-23</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag voor Pinksteren (Day before Whitsun)</openecdis:remark>
+   </openecdis:day>
+    <openecdis:day>
+    <openecdis:date>2015-05-24</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>00:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Pinksteren (Whitsun)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-05-25</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>22:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Pinkstermaandag (Whitsun Monday)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-07-20</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag voor Nationale feestdag (Day before National Holiday)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-07-21</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>22:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Nationale feestdag (National Holiday)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-08-14</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag voor OLV Hemelvaart (Day before ...)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-08-15</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>00:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> OLV Hemelvaart (...)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-10-31</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag voor Allerheiligen (Day before All Saints Day)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-11-01</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>22:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Allerheiligen (All Saints Day)</openecdis:remark>
+   </openecdis:day>
+      <openecdis:day>
+    <openecdis:date>2015-11-10</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Dag voor Wapenstilstand (Day before Remembrance Day)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-11-11</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>22:00</openecdis:start>
+     <openecdis:end>24:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Wapenstilstand (Remembrance Day)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-12-24</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>18:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Kerstavond (Christmas Eve)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-12-25</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>00:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Kerstdag (Christmas)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-12-26</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>09:00</openecdis:start>
+     <openecdis:end>22:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> 2de Kerstdag (2nd Christmas day)</openecdis:remark>
+   </openecdis:day>
+   <openecdis:day>
+    <openecdis:date>2015-12-31</openecdis:date>
+    <openecdis:time_frame>
+     <openecdis:start>00:00</openecdis:start>
+     <openecdis:end>18:00</openecdis:end>
+    </openecdis:time_frame>
+    <openecdis:remark> Nieuwjaarsavond (New Years Eve)</openecdis:remark>
+   </openecdis:day>
+  </openecdis:individual_schedule>
+  <openecdis:regular_schedule>
+   <openecdis:period>
+    <openecdis:from>2015-01-01</openecdis:from>
+    <openecdis:to>2015-12-31</openecdis:to>
+    <openecdis:days_with_common_schedule>
+     <openecdis:name_of_days>Sunday</openecdis:name_of_days>
+     <openecdis:time_frame>
+      <openecdis:start>22:00</openecdis:start>
+      <openecdis:end>24:00</openecdis:end>
+     </openecdis:time_frame>
+    </openecdis:days_with_common_schedule>
+    <openecdis:days_with_common_schedule>
+     <openecdis:name_of_days>Monday Tuesday Wednesday Thursday Friday</openecdis:name_of_days>
+     <openecdis:time_frame>
+      <openecdis:start>00:00</openecdis:start>
+      <openecdis:end>24:00</openecdis:end>
+     </openecdis:time_frame>
+    </openecdis:days_with_common_schedule>
+    <openecdis:days_with_common_schedule>
+     <openecdis:name_of_days>Saturday</openecdis:name_of_days>
+     <openecdis:time_frame>
+      <openecdis:start>00:00</openecdis:start>
+      <openecdis:end>22:00</openecdis:end>
+     </openecdis:time_frame>
+    </openecdis:days_with_common_schedule>
+   </openecdis:period>
+  </openecdis:regular_schedule>
+ </openecdis:time_schedule>
+</openecdis:facility>
