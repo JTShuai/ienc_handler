@@ -36,8 +36,20 @@ def getGpsCoordFromPoint(point: Point):
     return c_lon, c_lat
 
 
+def getPointByCoordinate(latitude, longitude ):
+    """
+    transform lat/lon point to WGS84 shapely point
+
+    :return: (longitude ,latitude)
+    :rtype: shapely.geometry
+    """
+    p = gpd.points_from_xy([longitude], [latitude], crs=f"EPSG:{GpdEncExtractor.EPSG}")[0]
+
+    return p
+
 def getAllFileNames(data_path):
     """get all ENC file names in the data folder"""
+
     files_list = glob.glob(data_path + '/*/*.000')
 
     return files_list
@@ -64,6 +76,10 @@ class GpdEncExtractor:
         :return: layer_gdf
         :rtype: GeoDataFrame
         """
+        # if the given layer_name is not contained in data
+        if layer_name not in self.enc_layers.keys():
+            return None
+
         layer_gdf = self.enc_layers[layer_name].copy()
 
         # geographic coordinate system (GCS) -> projected coordinate system (PCS)
@@ -126,6 +142,10 @@ class GpdEncExtractor:
         :rtype:
         """
 
+        # check the validation
+        if layer_gdf is None:
+            return None
+
         # get distance
         layer_gdf = self.getDistanceToRefPoint(layer_gdf, reference_point)
 
@@ -135,19 +155,12 @@ class GpdEncExtractor:
         range_filter = (filtered_gdf['distance'] <= radius)
         filtered_gdf = filtered_gdf.loc[range_filter]
 
+        # check if there is bridge in the given range
+        if filtered_gdf.shape[0] == 0:
+            return None
+
         return filtered_gdf
 
-    def getPointByCoordinate(self, latitude, longitude ):
-        """
-        transform lat/lon point to WGS84 shapely point
-
-        :return: (longitude ,latitude)
-        :rtype: shapely.geometry
-        """
-        p = gpd.points_from_xy([longitude], [latitude], crs=f"EPSG:{GpdEncExtractor.EPSG}")[0]
-
-
-        return p
 
 
 # 实时 map 文件
@@ -177,20 +190,18 @@ if __name__ == '__main__':
     GPS: 50.87959 4.70093 (latitude, longitude)
     '''
     # (lat,lon)
-    # LEUVEN = (50.87959, 4.70093)
+    LEUVEN = (50.87959, 4.70093)
+    reader = GpdEncExtractor(FILE)
     #
+    target_p = getPointByCoordinate(LEUVEN[0], LEUVEN[1])
     #
-    # reader = GpdEncExtractor(FILE)
-    #
-    # target_p = reader.getPointByCoordinate(LEUVEN[0],LEUVEN[1])
-    #
-    # bridges = reader.getGpdByLayerName('bridge')
-    # # print(bridges)
+    bridges = reader.getGpdByLayerName('bridge')
+    # # print(bridges)s
     # show_distance = reader.getDistanceToRefPoint(bridges, target_p)
     # # print(show_distance)
-    # near_bridges = reader.getFilteredGdfByDistance(bridges, target_p, 42)
+    near_bridges = reader.getFilteredGdfByDistance(bridges, target_p, 42)
     #
-    # print(near_bridges)
+    print(near_bridges)
 
 
 
