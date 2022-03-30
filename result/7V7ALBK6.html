@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4deefceb5e944a91a331ea6b897bf01c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_4deefceb5e944a91a331ea6b897bf01c" ></div>
+        
+</body>
+<script>    
+    
+            var map_4deefceb5e944a91a331ea6b897bf01c = L.map(
+                "map_4deefceb5e944a91a331ea6b897bf01c",
+                {
+                    center: [51.0874764, 5.13894945],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_4deefceb5e944a91a331ea6b897bf01c);
+
+            
+
+        
+    
+            var tile_layer_e1f72b560876454c87ff88e39e41c1bd = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4deefceb5e944a91a331ea6b897bf01c);
+        
+    
+            map_4deefceb5e944a91a331ea6b897bf01c.fitBounds(
+                [[51.0763759, 5.1063951], [51.0985769, 5.171503799999999]],
+                {}
+            );
+        
+    
+        function geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_styler(feature) {
+            switch(feature.id) {
+                case "0": case "17": 
+                    return {"color": "#440154", "fillColor": "#440154", "fillOpacity": 0.5, "weight": 2};
+                case "9": 
+                    return {"color": "#482374", "fillColor": "#482374", "fillOpacity": 0.5, "weight": 2};
+                case "10": 
+                    return {"color": "#481d6f", "fillColor": "#481d6f", "fillOpacity": 0.5, "weight": 2};
+                case "11": 
+                    return {"color": "#34618d", "fillColor": "#34618d", "fillOpacity": 0.5, "weight": 2};
+                case "13": 
+                    return {"color": "#423f85", "fillColor": "#423f85", "fillOpacity": 0.5, "weight": 2};
+                case "14": 
+                    return {"color": "#470e61", "fillColor": "#470e61", "fillOpacity": 0.5, "weight": 2};
+                case "15": 
+                    return {"color": "#414487", "fillColor": "#414487", "fillOpacity": 0.5, "weight": 2};
+                case "18": 
+                    return {"color": "#481668", "fillColor": "#481668", "fillOpacity": 0.5, "weight": 2};
+                case "20": 
+                    return {"color": "#375a8c", "fillColor": "#375a8c", "fillOpacity": 0.5, "weight": 2};
+                case "21": 
+                    return {"color": "#fde725", "fillColor": "#fde725", "fillOpacity": 0.5, "weight": 2};
+                case "22": 
+                    return {"color": "#3c508b", "fillColor": "#3c508b", "fillOpacity": 0.5, "weight": 2};
+                default:
+                    return {"color": "#460b5e", "fillColor": "#460b5e", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3};
+            
+            let style = geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1 = L.geoJson(null, {
+                onEachFeature: geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_onEachFeature,
+            
+                style: geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_styler,
+                pointToLayer: geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_pointToLayer
+        });
+
+        function geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_add (data) {
+            geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1
+                .addData(data)
+                .addTo(map_4deefceb5e944a91a331ea6b897bf01c);
+        }
+            geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1_add({"bbox": [5.1063951, 51.0763759, 5.171503799999999, 51.0985769], "features": [{"bbox": [5.1067312, 51.0984184, 5.106908999999999, 51.0985769], "geometry": {"coordinates": [[[5.106908999999999, 51.09855699999999], [5.106851499999999, 51.0984184], [5.1067312, 51.098437799999985], [5.1067879, 51.0985769], [5.106908999999999, 51.09855699999999]]], "type": "Polygon"}, "id": "0", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 1, "GRUP": 2, "HORACC": null, "HORCLR": 24.0, "INFORM": null, "LNAM": "7F8F56152E020001", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": "Brug Kwaadmechelen Noordersluis", "PICREP": null, "PRIM": 3, "RCID": 14589, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#440154", "area": 352.8508089287796, "comctn": null, "distance": 37.4869320776105, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.142946299999999, 51.09000749999999, 5.1434699, 51.090262499999994], "geometry": {"coordinates": [[[5.143316199999999, 51.090262499999994], [5.1434699, 51.0901668], [5.143056099999999, 51.09000749999999], [5.142946299999999, 51.0901186], [5.143316199999999, 51.090262499999994]]], "type": "Polygon"}, "id": "9", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 14, "GRUP": 2, "HORACC": null, "HORCLR": 94.0, "INFORM": null, "LNAM": "7F8F56152E02000E", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 14602, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#482374", "area": 1193.4479583275324, "comctn": null, "distance": 38.89891921473573, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.144320100000001, 51.090557100000005, 5.1447988, 51.090796499999996], "geometry": {"coordinates": [[[5.144473999999999, 51.090557100000005], [5.144320100000001, 51.090652899999995], [5.1446883, 51.090796499999996], [5.1447988, 51.09068390000001], [5.144473999999999, 51.090557100000005]]], "type": "Polygon"}, "id": "10", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 15, "GRUP": 2, "HORACC": null, "HORCLR": 94.0, "INFORM": null, "LNAM": "7F8F56152E02000F", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 14603, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#481d6f", "area": 1064.9850428241, "comctn": null, "distance": 39.01147789127936, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.143316199999999, 51.0901668, 5.144473999999999, 51.090652899999995], "geometry": {"coordinates": [[[5.143316199999999, 51.090262499999994], [5.1434699, 51.0901668], [5.144473999999999, 51.090557100000005], [5.144320100000001, 51.090652899999995], [5.143316199999999, 51.090262499999994]]], "type": "Polygon"}, "id": "11", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 16, "GRUP": 2, "HORACC": null, "HORCLR": 94.0, "INFORM": null, "LNAM": "7F8F56152E020010", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Ham_Genebos.jpg", "PRIM": 3, "RCID": 14604, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#34618d", "area": 3081.1483628711426, "comctn": null, "distance": 38.95610284156262, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1711918, 51.076959599999995, 5.171503799999999, 51.07716659999999], "geometry": {"coordinates": [[[5.1711918, 51.077027099999995], [5.171362499999999, 51.07716659999999], [5.171503799999999, 51.07710019999999], [5.1713318, 51.076959599999995], [5.1711918, 51.077027099999995]]], "type": "Polygon"}, "id": "12", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 21, "GRUP": 2, "HORACC": null, "HORCLR": null, "INFORM": null, "LNAM": "7F8F56152E020015", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 14609, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#460b5e", "area": 614.7925091832352, "comctn": null, "distance": 39.67477555415074, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1706181, 51.0765109, 5.1713318, 51.077027099999995], "geometry": {"coordinates": [[[5.1707589, 51.0765109], [5.1706181, 51.0765777], [5.1711918, 51.077027099999995], [5.1713318, 51.076959599999995], [5.1707589, 51.0765109]]], "type": "Polygon"}, "id": "13", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 22, "GRUP": 2, "HORACC": null, "HORCLR": null, "INFORM": null, "LNAM": "7F8F56152E020016", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Tesssenderlo.JPG", "PRIM": 3, "RCID": 14610, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#423f85", "area": 2002.8260887056085, "comctn": null, "distance": 39.63494574524152, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.127632599999999, 51.0943733, 5.1278772, 51.094605399999985], "geometry": {"coordinates": [[[5.1277146, 51.094605399999985], [5.1278772, 51.0945803], [5.1277933, 51.0943733], [5.127632599999999, 51.09440229999999], [5.1277146, 51.094605399999985]]], "type": "Polygon"}, "id": "14", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 26, "GRUP": 2, "HORACC": null, "HORCLR": null, "INFORM": null, "LNAM": "7F8F56152E02001A", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 14614, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#470e61", "area": 698.294670172414, "comctn": null, "distance": 38.33764922967836, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1277146, 51.0945803, 5.128119399999999, 51.0952368], "geometry": {"coordinates": [[[5.1277146, 51.094605399999985], [5.1278772, 51.0945803], [5.128119399999999, 51.095209999999994], [5.1279566999999995, 51.0952368], [5.1277146, 51.094605399999985]]], "type": "Polygon"}, "id": "15", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 27, "GRUP": 2, "HORACC": null, "HORCLR": null, "INFORM": null, "LNAM": "7F8F56152E02001B", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Kwaadmechelen_Zwartenhoek.jpg", "PRIM": 3, "RCID": 14615, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#414487", "area": 2147.632713462316, "comctn": null, "distance": 38.375467555465136, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1279566999999995, 51.095209999999994, 5.1281939, 51.0954209], "geometry": {"coordinates": [[[5.1279566999999995, 51.0952368], [5.1280313, 51.0954209], [5.1281939, 51.095394199999994], [5.128119399999999, 51.095209999999994], [5.1279566999999995, 51.0952368]]], "type": "Polygon"}, "id": "16", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 28, "GRUP": 2, "HORACC": null, "HORCLR": null, "INFORM": null, "LNAM": "7F8F56152E02001C", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 14616, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#460b5e", "area": 630.352771741876, "comctn": null, "distance": 38.412329049855856, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1066177, 51.09813810000001, 5.1067958, 51.0982967], "geometry": {"coordinates": [[[5.1066177, 51.09815720000001], [5.106674599999999, 51.0982967], [5.1067958, 51.09827709999999], [5.1067381, 51.09813810000001], [5.1066177, 51.09815720000001]]], "type": "Polygon"}, "id": "17", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 30, "GRUP": 2, "HORACC": null, "HORCLR": 24.0, "INFORM": null, "LNAM": "7F8F56152E02001E", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": "Brug Kwaadmechelen Middensluis", "PICREP": null, "PRIM": 3, "RCID": 14618, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#440154", "area": 353.81449839574896, "comctn": null, "distance": 37.46069714893816, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1063951, 51.0975823, 5.1066636999999995, 51.0978192], "geometry": {"coordinates": [[[5.106480899999999, 51.0978192], [5.1066338, 51.0977975], [5.1066636999999995, 51.097677199999985], [5.1065477, 51.0975823], [5.1063951, 51.0976082], [5.106480899999999, 51.0978192]]], "type": "Polygon"}, "id": "18", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444228610, "FIDS": 32, "GRUP": 2, "HORACC": null, "HORCLR": 24.0, "INFORM": null, "LNAM": "7F8F56152E020020", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": "Brug Kwaadmechelen Duwvaartsluis", "PICREP": null, "PRIM": 3, "RCID": 14620, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#481668", "area": 848.3643199832593, "comctn": null, "distance": 37.414151680109285, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1617015, 51.0804566, 5.162465499999999, 51.080769499999995], "geometry": {"coordinates": [[[5.1619799, 51.080769499999995], [5.162465499999999, 51.08052359999999], [5.1617631, 51.0804566], [5.1617015, 51.08074239999998], [5.1619799, 51.080769499999995]]], "type": "Polygon"}, "id": "20", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1570700774, "FIDS": 53, "GRUP": 2, "HORACC": null, "HORCLR": 100.0, "INFORM": null, "LNAM": "7F8F5D9EFDE60035", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 18450, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#375a8c", "area": 2825.582275470626, "comctn": null, "distance": 39.35112751005396, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1619799, 51.08052359999999, 5.1640663, 51.08092369999999], "geometry": {"coordinates": [[[5.1619799, 51.080769499999995], [5.162465499999999, 51.08052359999999], [5.1640663, 51.08067770000001], [5.1635729, 51.08092369999999], [5.1619799, 51.080769499999995]]], "type": "Polygon"}, "id": "21", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1570700774, "FIDS": 54, "GRUP": 2, "HORACC": null, "HORCLR": 100.0, "INFORM": null, "LNAM": "7F8F5D9EFDE60036", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Oostham_N552.jpg", "PRIM": 3, "RCID": 18451, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 10.06, "VERCOP": null, "__folium_color": "#fde725", "area": 9235.739756578678, "comctn": null, "distance": 39.41786600857669, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.1635729, 51.08067770000001, 5.164284699999999, 51.0809871], "geometry": {"coordinates": [[[5.1640663, 51.08067770000001], [5.1635729, 51.08092369999999], [5.1642292, 51.0809871], [5.164284699999999, 51.080699], [5.1640663, 51.08067770000001]]], "type": "Polygon"}, "id": "22", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1570700774, "FIDS": 55, "GRUP": 2, "HORACC": null, "HORCLR": 100.0, "INFORM": null, "LNAM": "7F8F5D9EFDE60037", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 18452, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#3c508b", "area": 2533.0966053685606, "comctn": null, "distance": 39.48290369487946, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.170446999999999, 51.0763759, 5.1707589, 51.0765777], "geometry": {"coordinates": [[[5.1707589, 51.0765109], [5.1706181, 51.0765777], [5.170446999999999, 51.076445299999996], [5.170595799999999, 51.0763759], [5.1707589, 51.0765109]]], "type": "Polygon"}, "id": "23", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1611759910, "FIDS": 1, "GRUP": 2, "HORACC": null, "HORCLR": null, "INFORM": null, "LNAM": "7F8F601181260001", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 20405, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#460b5e", "area": 606.2908245622415, "comctn": null, "distance": 39.595362698603545, "updmsg": null, "verdat": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_c3c8f9d17afd45aa88f8d4e54700a2d1.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["RCID", "PRIM", "GRUP", "OBJL", "RVER", "AGEN", "FIDN", "FIDS", "LNAM", "comctn", "CONDTN", "CONRAD", "CONVIS", "DATEND", "DATSTA", "HORACC", "HORCLR", "NOBJNM", "OBJNAM", "TIMEND", "TIMSTA", "VERACC", "VERCCL", "VERCLR", "VERCOP", "verdat", "INFORM", "NINFOM", "NTXTDS", "PICREP", "SCAMIN", "TXTDSC", "updmsg", "SORDAT", "SORIND", "area", "distance"];
+    let aliases = ["RCID", "PRIM", "GRUP", "OBJL", "RVER", "AGEN", "FIDN", "FIDS", "LNAM", "comctn", "CONDTN", "CONRAD", "CONVIS", "DATEND", "DATSTA", "HORACC", "HORCLR", "NOBJNM", "OBJNAM", "TIMEND", "TIMSTA", "VERACC", "VERCCL", "VERCLR", "VERCOP", "verdat", "INFORM", "NINFOM", "NTXTDS", "PICREP", "SCAMIN", "TXTDSC", "updmsg", "SORDAT", "SORIND", "area", "distance"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+</script>

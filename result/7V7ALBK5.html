@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9dffd0ee634f4209857ea192efcf781c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9dffd0ee634f4209857ea192efcf781c" ></div>
+        
+</body>
+<script>    
+    
+            var map_9dffd0ee634f4209857ea192efcf781c = L.map(
+                "map_9dffd0ee634f4209857ea192efcf781c",
+                {
+                    center: [51.114815899999996, 5.02818875],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_9dffd0ee634f4209857ea192efcf781c);
+
+            
+
+        
+    
+            var tile_layer_dc3af4cd41f040289f559323b5e1a252 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9dffd0ee634f4209857ea192efcf781c);
+        
+    
+            map_9dffd0ee634f4209857ea192efcf781c.fitBounds(
+                [[51.1036526, 4.9822777], [51.125979199999996, 5.074099799999999]],
+                {}
+            );
+        
+    
+        function geo_json_69a1effdc57e400aa73f8c2ba3d66678_styler(feature) {
+            switch(feature.id) {
+                case "0": 
+                    return {"color": "#dde318", "fillColor": "#dde318", "fillOpacity": 0.5, "weight": 2};
+                case "3": 
+                    return {"color": "#46085c", "fillColor": "#46085c", "fillOpacity": 0.5, "weight": 2};
+                case "4": 
+                    return {"color": "#fde725", "fillColor": "#fde725", "fillOpacity": 0.5, "weight": 2};
+                case "5": 
+                    return {"color": "#460a5d", "fillColor": "#460a5d", "fillOpacity": 0.5, "weight": 2};
+                case "6": 
+                    return {"color": "#482878", "fillColor": "#482878", "fillOpacity": 0.5, "weight": 2};
+                case "9": 
+                    return {"color": "#31b57b", "fillColor": "#31b57b", "fillOpacity": 0.5, "weight": 2};
+                case "10": 
+                    return {"color": "#69cd5b", "fillColor": "#69cd5b", "fillOpacity": 0.5, "weight": 2};
+                case "11": 
+                    return {"color": "#2fb47c", "fillColor": "#2fb47c", "fillOpacity": 0.5, "weight": 2};
+                default:
+                    return {"color": "#440154", "fillColor": "#440154", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_69a1effdc57e400aa73f8c2ba3d66678_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_69a1effdc57e400aa73f8c2ba3d66678_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3};
+            
+            let style = geo_json_69a1effdc57e400aa73f8c2ba3d66678_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_69a1effdc57e400aa73f8c2ba3d66678_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_69a1effdc57e400aa73f8c2ba3d66678.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_69a1effdc57e400aa73f8c2ba3d66678_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_69a1effdc57e400aa73f8c2ba3d66678 = L.geoJson(null, {
+                onEachFeature: geo_json_69a1effdc57e400aa73f8c2ba3d66678_onEachFeature,
+            
+                style: geo_json_69a1effdc57e400aa73f8c2ba3d66678_styler,
+                pointToLayer: geo_json_69a1effdc57e400aa73f8c2ba3d66678_pointToLayer
+        });
+
+        function geo_json_69a1effdc57e400aa73f8c2ba3d66678_add (data) {
+            geo_json_69a1effdc57e400aa73f8c2ba3d66678
+                .addData(data)
+                .addTo(map_9dffd0ee634f4209857ea192efcf781c);
+        }
+            geo_json_69a1effdc57e400aa73f8c2ba3d66678_add({"bbox": [4.9822777, 51.1036526, 5.074099799999999, 51.125979199999996], "features": [{"bbox": [5.0232057999999995, 51.114287499999996, 5.0238417, 51.115032599999985], "geometry": {"coordinates": [[[5.0232057999999995, 51.114329999999995], [5.0236788, 51.115032599999985], [5.0238417, 51.11498959999999], [5.023367399999999, 51.114287499999996], [5.0232057999999995, 51.114329999999995]]], "type": "Polygon"}, "id": "0", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 53, "GRUP": 2, "HORACC": null, "HORCLR": null, "INFORM": null, "LNAM": "7F8F5613D2A20035", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Eindhout.JPG", "PRIM": 3, "RCID": 2201, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#dde318", "area": 2649.19672056346, "comctn": null, "distance": 34.59412055134144, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.0231041, 51.11413389999999, 5.023367399999999, 51.114329999999995], "geometry": {"coordinates": [[[5.0232057999999995, 51.114329999999995], [5.023367399999999, 51.114287499999996], [5.023265899999999, 51.11413389999999], [5.0231041, 51.114176199999996], [5.0231508, 51.1142471], [5.0232057999999995, 51.114329999999995]]], "type": "Polygon"}, "id": "1", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 54, "GRUP": 2, "HORACC": null, "HORCLR": 48.7, "INFORM": null, "LNAM": "7F8F5613D2A20036", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2202, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#440154", "area": 575.9109367448764, "comctn": null, "distance": 34.544918282267496, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.0236788, 51.11498959999999, 5.023942999999999, 51.1151846], "geometry": {"coordinates": [[[5.0236788, 51.115032599999985], [5.0237352, 51.1151166], [5.0237813000000004, 51.1151846], [5.023942999999999, 51.11514209999999], [5.0238417, 51.11498959999999], [5.0236788, 51.115032599999985]]], "type": "Polygon"}, "id": "2", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 55, "GRUP": 2, "HORACC": null, "HORCLR": 48.7, "INFORM": null, "LNAM": "7F8F5613D2A20037", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2203, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#440154", "area": 574.1417277356603, "comctn": null, "distance": 34.64314652662955, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [4.9828681, 51.125770499999994, 4.9831403, 51.125979199999996], "geometry": {"coordinates": [[[4.9828681, 51.12581289999999], [4.982977999999999, 51.125979199999996], [4.9831403, 51.1259362], [4.9830309999999995, 51.125770499999994], [4.9828681, 51.12581289999999]]], "type": "Polygon"}, "id": "3", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 56, "GRUP": 2, "HORACC": null, "HORCLR": 48.7, "INFORM": null, "LNAM": "7F8F5613D2A20038", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2204, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#46085c", "area": 625.3460481010134, "comctn": null, "distance": 33.804145064619476, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [4.9823884, 51.125039099999995, 4.9830309999999995, 51.12581289999999], "geometry": {"coordinates": [[[4.9823884, 51.12508189999999], [4.9828681, 51.12581289999999], [4.9830309999999995, 51.125770499999994], [4.9825520999999995, 51.125039099999995], [4.9823884, 51.12508189999999]]], "type": "Polygon"}, "id": "4", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 57, "GRUP": 2, "HORACC": null, "HORCLR": 48.7, "INFORM": null, "LNAM": "7F8F5613D2A20039", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Geel_Stelen.JPG", "PRIM": 3, "RCID": 2205, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#fde725", "area": 2760.745241092929, "comctn": null, "distance": 33.75161031107899, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [4.9822777, 51.1248717, 4.9825520999999995, 51.12508189999999], "geometry": {"coordinates": [[[4.9823884, 51.12508189999999], [4.9825520999999995, 51.125039099999995], [4.9824394, 51.1248717], [4.9822777, 51.1249137], [4.9823884, 51.12508189999999]]], "type": "Polygon"}, "id": "5", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 58, "GRUP": 2, "HORACC": null, "HORCLR": 48.7, "INFORM": null, "LNAM": "7F8F5613D2A2003A", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2206, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#460a5d", "area": 632.5528226065421, "comctn": null, "distance": 33.699053784058464, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.0737618, 51.1038112, 5.0740305999999995, 51.1040663], "geometry": {"coordinates": [[[5.0737618, 51.103840999999996], [5.0738606, 51.1040663], [5.0740305999999995, 51.104034199999994], [5.0739325, 51.1038112], [5.0737618, 51.103840999999996]]], "type": "Polygon"}, "id": "6", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 59, "GRUP": 2, "HORACC": null, "HORCLR": 50.0, "INFORM": null, "LNAM": "7F8F5613D2A2003B", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Meerhout_Vorst.jpg", "PRIM": 3, "RCID": 2207, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#482878", "area": 813.7087478285064, "comctn": null, "distance": 36.174823793801146, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.0738606, 51.104034199999994, 5.074099799999999, 51.1042242], "geometry": {"coordinates": [[[5.0738606, 51.1040663], [5.0738681, 51.10408319999999], [5.0739303, 51.1042242], [5.074099799999999, 51.10419449999999], [5.0740378, 51.1040513], [5.0740305999999995, 51.104034199999994], [5.0738606, 51.1040663]]], "type": "Polygon"}, "id": "7", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 60, "GRUP": 2, "HORACC": null, "HORCLR": 50.0, "INFORM": null, "LNAM": "7F8F5613D2A2003C", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2208, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#440154", "area": 575.0021225546088, "comctn": null, "distance": 36.193759409058835, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.0736924, 51.1036526, 5.0739325, 51.103840999999996], "geometry": {"coordinates": [[[5.0739325, 51.1038112], [5.0739188, 51.10377999999998], [5.0738998, 51.10373669999999], [5.073883899999999, 51.10370009999999], [5.0738628, 51.1036526], [5.0736924, 51.103683000000004], [5.0737542, 51.10382339999999], [5.0737618, 51.103840999999996], [5.0739325, 51.1038112]]], "type": "Polygon"}, "id": "8", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 61, "GRUP": 2, "HORACC": null, "HORCLR": 50.0, "INFORM": null, "LNAM": "7F8F5613D2A2003D", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2209, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#440154", "area": 574.153225554532, "comctn": null, "distance": 36.15592301263064, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.052984599999999, 51.107738399999995, 5.0534109, 51.10813089999999], "geometry": {"coordinates": [[[5.0532589, 51.107738399999995], [5.052984599999999, 51.107785699999994], [5.0530039, 51.1078293], [5.0530044, 51.1078305], [5.053137399999999, 51.10813089999999], [5.0534109, 51.1080809], [5.053278399999999, 51.1077826], [5.0532589, 51.107738399999995]]], "type": "Polygon"}, "id": "9", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 62, "GRUP": 2, "HORACC": null, "HORCLR": 49.8, "INFORM": null, "LNAM": "7F8F5613D2A2003E", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2210, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#31b57b", "area": 2004.882773148182, "comctn": null, "distance": 35.45357671739586, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.0526607, 51.107006099999985, 5.0531071, 51.10744199999999], "geometry": {"coordinates": [[[5.0531071, 51.10739629999999], [5.0530876, 51.10735209999999], [5.052934099999999, 51.107006099999985], [5.0526607, 51.107054199999986], [5.0528144, 51.10740139999999], [5.052832399999999, 51.10744199999999], [5.0531071, 51.10739629999999]]], "type": "Polygon"}, "id": "10", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 63, "GRUP": 2, "HORACC": null, "HORCLR": 49.8, "INFORM": null, "LNAM": "7F8F5613D2A2003F", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": null, "PRIM": 3, "RCID": 2211, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": null, "VERCOP": null, "__folium_color": "#69cd5b", "area": 2264.0490483661038, "comctn": null, "distance": 35.381804311705906, "updmsg": null, "verdat": null}, "type": "Feature"}, {"bbox": [5.052832399999999, 51.10739629999999, 5.0532589, 51.107785699999994], "geometry": {"coordinates": [[[5.0532589, 51.107738399999995], [5.052984599999999, 51.107785699999994], [5.052832399999999, 51.10744199999999], [5.0531071, 51.10739629999999], [5.0532589, 51.107738399999995]]], "type": "Polygon"}, "id": "11", "properties": {"AGEN": 32655, "CONDTN": null, "CONRAD": null, "CONVIS": null, "DATEND": null, "DATSTA": null, "FIDN": 1444139682, "FIDS": 64, "GRUP": 2, "HORACC": null, "HORCLR": 49.8, "INFORM": null, "LNAM": "7F8F5613D2A20040", "NINFOM": null, "NOBJNM": null, "NTXTDS": null, "OBJL": 17011, "OBJNAM": null, "PICREP": "AK_Brug_Meerhout_Veedijk.JPG", "PRIM": 3, "RCID": 2212, "RVER": 1, "SCAMIN": 90000, "SORDAT": "20150817", "SORIND": null, "TIMEND": null, "TIMSTA": null, "TXTDSC": null, "VERACC": null, "VERCCL": null, "VERCLR": 9.1, "VERCOP": null, "__folium_color": "#2fb47c", "area": 1997.2600781692431, "comctn": null, "distance": 35.41882262694137, "updmsg": null, "verdat": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_69a1effdc57e400aa73f8c2ba3d66678.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["RCID", "PRIM", "GRUP", "OBJL", "RVER", "AGEN", "FIDN", "FIDS", "LNAM", "comctn", "CONDTN", "CONRAD", "CONVIS", "DATEND", "DATSTA", "HORACC", "HORCLR", "NOBJNM", "OBJNAM", "TIMEND", "TIMSTA", "VERACC", "VERCCL", "VERCLR", "VERCOP", "verdat", "INFORM", "NINFOM", "NTXTDS", "PICREP", "SCAMIN", "TXTDSC", "updmsg", "SORDAT", "SORIND", "area", "distance"];
+    let aliases = ["RCID", "PRIM", "GRUP", "OBJL", "RVER", "AGEN", "FIDN", "FIDS", "LNAM", "comctn", "CONDTN", "CONRAD", "CONVIS", "DATEND", "DATSTA", "HORACC", "HORCLR", "NOBJNM", "OBJNAM", "TIMEND", "TIMSTA", "VERACC", "VERCCL", "VERCLR", "VERCOP", "verdat", "INFORM", "NINFOM", "NTXTDS", "PICREP", "SCAMIN", "TXTDSC", "updmsg", "SORDAT", "SORIND", "area", "distance"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+</script>
