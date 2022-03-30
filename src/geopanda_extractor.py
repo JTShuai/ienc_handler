@@ -20,13 +20,27 @@ from copy import deepcopy
 import geopy.distance
 
 
-def getGpsCoordFromPoint(point:Point):
+def getGpsCoordFromPoint(point: Point):
+    """
+    get longitude and latitude from Point object
+
+    :param point: shapely point object
+    :type point: geometry
+    :return: longitude, latitude
+    :rtype: string
+    """
 
     c_lon, c_lat = point.coords.xy
     c_lon, c_lat = c_lon[0], c_lat[0]
 
     return c_lon, c_lat
 
+
+def getAllFileNames(data_path):
+    """get all ENC file names in the data folder"""
+    files_list = glob.glob(data_path + '/*/*.000')
+
+    return files_list
 
 class GpdEncExtractor:
     """
@@ -155,25 +169,28 @@ if __name__ == '__main__':
     PATH = '../data/7V7ALBK1-4'
     FILE = os.path.join(PATH, '7V7ALBK1.000')
 
+    DATA_PATH = '../data'
+
+    getAllFileNames(DATA_PATH)
     '''
     Leuven:
     GPS: 50.87959 4.70093 (latitude, longitude)
     '''
     # (lat,lon)
-    LEUVEN = (50.87959, 4.70093)
-
-
-    reader = GpdEncExtractor(FILE)
-
-    target_p = reader.getPointByCoordinate(LEUVEN[0],LEUVEN[1])
-
-    bridges = reader.getGpdByLayerName('bridge')
-    # print(bridges)
-    show_distance = reader.getDistanceToRefPoint(bridges, target_p)
-    # print(show_distance)
-    near_bridges = reader.getFilteredGdfByDistance(bridges, target_p, 42)
-
-    print(near_bridges)
+    # LEUVEN = (50.87959, 4.70093)
+    #
+    #
+    # reader = GpdEncExtractor(FILE)
+    #
+    # target_p = reader.getPointByCoordinate(LEUVEN[0],LEUVEN[1])
+    #
+    # bridges = reader.getGpdByLayerName('bridge')
+    # # print(bridges)
+    # show_distance = reader.getDistanceToRefPoint(bridges, target_p)
+    # # print(show_distance)
+    # near_bridges = reader.getFilteredGdfByDistance(bridges, target_p, 42)
+    #
+    # print(near_bridges)
 
 
 
