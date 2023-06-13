@@ -10,9 +10,9 @@ from sys import stdout
 import numpy as np
 import glob
 from pickle import dumps
+import matplotlib
 import matplotlib.pyplot as plt
 import os.path
-import folium
 import webbrowser
 from shapely import geometry
 from shapely.geometry import Polygon, LineString, Point
@@ -92,16 +92,20 @@ class GpdEncExtractor:
         ENC geometry data is based on epsg4326 (geographic), 
         the following line is only used to remind me to notice to_crs() method
         """
+        geometrylayer = layer_gdf.geometry
+
+
+
         layer_gdf = layer_gdf.to_crs(epsg=4326)
 
         # add area and centroid information
         # layer_gdf["area"] = layer_gdf.area
-        layer_gdf['centroid'] = layer_gdf.centroid
+        #layer_gdf['centroid'] = layer_gdf.centroid
 
-        layer_gdf = layer_gdf.to_crs(epsg=3857)
-        layer_gdf["area"] = layer_gdf.area
+        #layer_gdf = layer_gdf.to_crs(epsg=3857)
+        #layer_gdf["area"] = layer_gdf.area
 
-        return layer_gdf
+        return geometrylayer
 
     def getDistanceToRefPoint(self, layer_gdf, reference_point: geometry):
         """
@@ -166,8 +170,8 @@ class GpdEncExtractor:
 
 
 if __name__ == '__main__':
-    PATH = '../data/7V7ALBK1-4'
-    FILE = os.path.join(PATH, '7V7ALBK1.000')
+    PATH = 'C:\\Users\\martibae\\Documents\\ENC_code\\INEC_Demo\\data\\7V7KLEDI'
+    FILE = os.path.join(PATH, '7V7KLEDI.000')
 
     DATA_PATH = '../data'
 
@@ -182,7 +186,12 @@ if __name__ == '__main__':
 
     target_p = getPointByCoordinate(LEUVEN[0], LEUVEN[1])
 
+    coastline = reader.getGpdByLayerName('COALNE')
+    coastline.to_file("coastline.geojson", driver='GeoJSON')
+    deptharea = reader.getGpdByLayerName('DEPARE')
+    deptharea.to_file("deptharea.geojson", driver='GeoJSON')
     bridges = reader.getGpdByLayerName('bridge')
-    near_bridges = reader.getFilteredGdfByDistance(bridges, target_p, 42)
+    bridges.to_file("bridges.geojson", driver='GeoJSON')
+    #near_bridges = reader.getFilteredGdfByDistance(bridges, target_p, 42)
 
-    print(near_bridges)
+    #print(near_bridges)
