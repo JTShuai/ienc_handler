@@ -6,7 +6,7 @@
 read all ENC .000 format files in data folder, and collect all bridges within a certain range of Leuven
 """
 
-from enc_collector import EncCollector
+from ienc_handler.batch_collector import BatchCollector
 
 params = {
     'data_root_path': './data',
@@ -16,7 +16,7 @@ params = {
     'layer_name': 'bridge'
 }
 
-my_collector = EncCollector(**params)
+my_collector = BatchCollector(**params)
 bridge_set = my_collector.getCollectionByDistance(True, True)
 
 
