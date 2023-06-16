@@ -78,30 +78,64 @@ class GpdEncExtractor:
         :return: layer_gdf
         :rtype: GeoDataFrame
         """
-        # if the given layer_name is not contained in data
-        if layer_name not in self.enc_layers.keys():
+
+        layer_gdf = self.__selectLayer(layer_name)
+        if layer_gdf is None:
             return None
-
-        layer_gdf = self.enc_layers[layer_name].copy()
-
         # geographic coordinate system (GCS) -> projected coordinate system (PCS)
         """
         here, actually the transformation dose not be executed, because 
         the further distance calculation is based on gps coordinate.
-        
+
         ENC geometry data is based on epsg4326 (geographic), 
         the following line is only used to remind me to notice to_crs() method
         """
         layer_gdf = layer_gdf.to_crs(epsg=4326)
-
-        # add area and centroid information
-        # layer_gdf["area"] = layer_gdf.area
+        # add area and centroid as columns in DataFrame
+        # a GeoSeries is a separate data structure from a GeoDataFrame
+        # keep centroid in lat/lon
         layer_gdf['centroid'] = layer_gdf.centroid
 
         layer_gdf = layer_gdf.to_crs(epsg=3857)
         layer_gdf["area"] = layer_gdf.area
 
         return layer_gdf
+
+    def getGeometryByName(self, layer_name):
+        """
+        get geometry layer
+        :param layer_name:
+        :return:
+        """
+        layer = self.__selectLayer(layer_name)
+
+        if layer is not None:
+            return layer.to_crs(epsg=4326).geometry
+        else:
+            print(f'Current file does not contain the layer: {layer_name}')
+            return None
+
+    def saveAsGeoJson(self, gpd_data, save_name):
+        """
+        save as GeoJson file
+        :param gpd_data: GeoPandas dataframe or series
+        :param save_name: file name, end with .geojson
+        :return:
+        """
+
+        if str(save_name).split('.')[-1] != 'geojson':
+            raise Exception("WRONG FILE EXTENSION. File extension must be '.geojson'")
+
+        if gpd_data is None:
+            return None
+        gpd_data.to_file(save_name, driver='GeoJSON')
+
+    def __selectLayer(self, layer_name):
+        if layer_name not in self.enc_layers.keys():
+            return None
+
+        return self.enc_layers[layer_name].copy()
+
 
     def getDistanceToRefPoint(self, layer_gdf, reference_point: geometry):
         """
@@ -185,4 +219,6 @@ if __name__ == '__main__':
     bridges = reader.getGpdByLayerName('bridge')
     near_bridges = reader.getFilteredGdfByDistance(bridges, target_p, 42)
 
-    print(near_bridges)
+
+    coastline = reader.getGeometryByName('bridge')
+    reader.saveAsGeoJson(coastline, 'test.geojson')
