@@ -3,7 +3,7 @@
 @Author  ：Jiangtao Shuai
 @Date    ：30.03.22
 """
-from geopanda_extractor import (
+from ienc_handler.feature_extractor import (
     GpdEncExtractor,
     getAllFileNames,
     getPointByCoordinate
@@ -12,7 +12,7 @@ import os.path
 import pickle
 
 
-class EncCollector:
+class BatchCollector:
 
     def __init__(self, data_root_path, reference_point, reference_name, search_range, layer_name):
 

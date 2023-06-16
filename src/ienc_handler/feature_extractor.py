@@ -4,16 +4,9 @@
 @Date    ：30.03.22
 '''
 import geopandas as gpd
-import pandas as pd
 import fiona
-from sys import stdout
-import numpy as np
 import glob
-from pickle import dumps
-import matplotlib.pyplot as plt
 import os.path
-import folium
-import webbrowser
 from shapely import geometry
 from shapely.geometry import Polygon, LineString, Point
 from copy import deepcopy
@@ -200,10 +193,10 @@ class GpdEncExtractor:
 
 
 if __name__ == '__main__':
-    PATH = '../data/7V7ALBK1-4'
+    PATH = '../../data/7V7ALBK1-4'
     FILE = os.path.join(PATH, '7V7ALBK1.000')
 
-    DATA_PATH = '../data'
+    DATA_PATH = '../../data'
 
     getAllFileNames(DATA_PATH)
     '''
